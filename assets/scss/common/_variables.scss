@@ -1,0 +1,56 @@
+// colors
+$blue: #0DA7FC;
+$blue-dark: #0388EF;
+$blue-light: #41C5FF;
+$green: #13B72A;
+$green-dark: #009907;
+$green-light: #20D330;
+$red: #FF3E2E;
+$red-dark: #DD1500;
+$red-light: #FF8177;
+
+$text: #333333;
+
+$gray: #3F4D60;
+$gray-dark: #243343;
+$gray-light: #8C94A0;
+$gray-80: #657180;
+$gray-60: #8C94A0;
+$gray-40: #B2B8BF;
+$gray-25: #CFD2D7;
+$gray-10: #EBEDEF;
+$gray-5: #F5F6F7;
+$white: #FFFFFF;
+
+$box-shadow-value: 0 8px 40px 0;
+$box-shadow-popup: $box-shadow-value rgba(63, 77, 96, 0.3);
+$box-shadow-modal: $box-shadow-value rgba(140,147,160,0.60);
+
+//forms
+$border-color: #E1E1E1;
+$border-color-alt: #EBEDEF;
+
+$border-radius: 4px;
+
+// typo
+$main-font-size: 16px;
+
+$ff: "Proxima Nova", "Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
+
+$fw-black:      900;
+$fw-extra:      800;
+$fw-bold:       700;
+$fw-semi:       600;
+$fw-regular:    400;
+$fw-light:      300;
+$fw-thin:       200;
+
+// animations
+$transition-default: .3s ease;
+$transition-all: all $transition-default;
+
+// media
+$screen-mobile: 543px;
+$screen-landscape: 767px;
+$screen-tablet: 991px;
+$screen-desktop: 1199px;

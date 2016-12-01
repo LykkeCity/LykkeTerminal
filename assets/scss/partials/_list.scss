@@ -1,0 +1,42 @@
+.list {
+  @extend %disable-list-style;
+
+  &__item {
+    color: $gray;
+    letter-spacing: 0;
+    @include rem(font-size, 16px);
+    @include rem(line-height, 24px);
+
+    + .list__item {
+      @include rem(margin-top, 15px);
+    }
+  }
+
+  &__link {
+    color: $gray;
+
+    &:hover {
+      .icon {
+        color: $blue;
+      }
+    }
+  }
+
+  .icon {
+    color: $gray-light;
+    float: left;
+
+    @include rem(font-size, 24px);
+
+    + span {
+      display: block;
+
+      @include rem(padding-left, 40px);
+    }
+  }
+
+  .divider {
+    border-bottom: 1px solid $gray-25;
+    @include rem(margin, 15px 0);
+  }
+}

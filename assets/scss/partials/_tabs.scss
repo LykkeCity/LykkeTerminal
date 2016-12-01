@@ -1,0 +1,71 @@
+.nav-tabs {
+  padding: 0;
+  border-bottom-color: $gray-25;
+  margin-right: 0;
+
+  > li {
+    > a:not(.btn) {
+      border: 0;
+      border-bottom: 2px solid transparent;
+      color: $gray-40;
+      font-weight: $fw-regular;
+
+      @include rem(font-size, 16px);
+      @include rem(padding, 11px 20px);
+
+      &:hover, &:focus {
+        text-decoration: none;
+        background: transparent;
+        color: $gray;
+      }
+    }
+
+    &.active {
+      > a, > a:hover, > a:focus {
+        font-weight: $fw-semi;
+        border: 0;
+        border-bottom: 2px solid $blue;
+        color: $blue;
+      }
+    }
+  }
+
+  @media all and (max-width: 539px) {
+    width: auto;
+
+    @include rem(margin-right, -15px !important);
+  }
+}
+
+.tab-panel {
+  background: $gray-5;
+  border-top: 1px solid $gray-25;
+  border-bottom: 1px solid $gray-25;
+
+  .nav-tabs {
+    border-bottom: 0;
+
+    > li {
+      > a:not(.btn) {
+        border: 0;
+        border-left: 1px solid $gray-25;
+        border-right: 1px solid $gray-25;
+        border-radius: 0;
+        margin-left: 0;
+        margin-right: -1px;
+        @include rem(padding, 10px 13px);
+
+        &:hover, &:focus{
+
+        }
+      }
+
+      &.active {
+        > a, > a:hover, > a:focus {
+          box-shadow: inset 0 2px 0 0 $blue;
+          background: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.page {
+  &_title, h1.page_title, h2.page_title {
+    @include rem(margin-bottom, 17px);
+
+    span {
+      display: inline;
+      font-weight: 300;
+    }
+  }
+
+  &_subtitle, h3.page_subtitle {
+    text-align: center;
+    color: #b2b8bf;
+    margin-bottom: 68px;
+  }
+}
+
+.section {
+  padding: 30px 0;
+}
+
+
+.icon--dots:before {
+  font-size: 20%;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+.icon--close:before {
+  font-size: 75%;
+}
+
+.icon--pair_view:before {
+  position: relative;
+  left: -2px;
+}

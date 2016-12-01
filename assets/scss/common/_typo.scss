@@ -1,0 +1,218 @@
+a {
+  color: $blue;
+  text-decoration: none;
+  transition: color $transition-default;
+
+  &:hover {
+    color: $gray;
+    text-decoration: none;
+  }
+}
+
+
+a, input, button {
+  &:focus {outline: none !important}
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {margin-top: 0; font-weight: normal; font-family: $ff}
+
+h5, .h5 {
+  font-weight: $fw-bold;
+
+  @include rem(font-size, 16px);
+  @include rem(line-height, 16px);
+  @include rem(margin-bottom, 10px);
+  @include rem(margin-bottom, 20px);
+}
+
+h4, .h4 {
+  font-weight: $fw-semi;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+
+  @include rem(font-size, 14px);
+  @include rem(margin-bottom, 30px);
+}
+
+h3, .h3 {
+  font-weight: $fw-bold;
+
+  @include rem(font-size, 20px);
+  @include rem(line-height, 24px);
+  @include rem(margin-bottom, 32px);
+}
+
+h2, .h2 {
+  font-weight: $fw-semi;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  @include rem(font-size, 26px);
+  @include rem(line-height, 32px);
+  @include rem(margin-bottom, 34px);
+}
+
+h1, .h1 {
+  font-weight: $fw-semi;
+
+  @include rem(font-size, 32px);
+  @include rem(line-height, 40px);
+  @include rem(margin-bottom, 32px);
+}
+
+b, strong {
+  font-weight: $fw-semi;
+}
+
+p {
+  font-weight: normal;
+  color: $gray;
+
+  @include rem(font-size, 16px);
+  @include rem(line-height, 24px);
+  @include rem(margin-bottom, 15px);
+
+  + h3, + h4, + h2 {
+    @include rem(margin-top, 45px);
+  }
+}
+
+.annotation {
+  @include rem(font-size, 14px);
+  @include rem(line-height, 20px);
+}
+
+hr {
+  border-top: 2px solid $border-color-alt;
+
+  @include rem(max-width, 770px);
+  @include rem(margin, 45px auto);
+}
+
+blockquote {
+  font-weight: normal;
+  line-height: 1.64;
+  color: $gray;
+
+  @include rem(font-size, 22px);
+}
+
+cite, figcaption {
+  font-weight: normal;
+  line-height: 1.82;
+  color: rgba($gray, .6);
+
+  @include rem(font-size, 18px);
+}
+
+figcaption {
+  @include rem(font-size, 16px);
+}
+
+.smallcaps {
+  text-transform: none;
+  letter-spacing: normal !important;
+}
+
+.lead {
+  font-weight: normal;
+  line-height: 1.64;
+  color: $gray;
+
+  @include rem(font-size, 22px);
+  @include rem(margin-bottom, 30px);
+}
+
+.text {
+  p, ul, ol {
+    font-weight: normal;
+    line-height: 1.67;
+    color: $gray;
+
+    @include rem(font-size, 18px);
+    @include rem(margin-bottom, 15px);
+
+    + h3, + h4, + h2 {
+      @include rem(margin-top, 45px);
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  ul {
+    font-weight: normal;
+    color: rgba(63, 77, 96, 0.8);
+    list-style-position: outside;
+    list-style-type: disc;
+
+    @include rem(font-size, 18px);
+    @include rem(line-height, 30px);
+    @include rem(padding-left, 25px);
+    @include rem(margin-top, 20px);
+    @include rem(margin-bottom, 20px);
+
+
+    li {
+      color: $gray;
+      position: relative;
+
+      @include rem(margin-bottom, 15px);
+
+      &:before {
+        color: $gray;
+        content: "\2022";
+        position: absolute;
+        right: 100%;
+        top: -2px;
+
+        @include rem(font-size, 28px);
+        @include rem(margin-right, 11px);
+      }
+    }
+
+    .li {color: rgba(63, 77, 96, 0.8);}
+
+    a:not(.btn) {
+      color: $blue;
+    }
+
+    + h3, + h4, + h2 {
+      @include rem(margin-top, 45px);
+    }
+  }
+
+  ol {
+    color: rgba(63, 77, 96, 0.8);
+    @include rem(padding-left, 24px);
+
+    li {
+      @include rem(margin-bottom, 10px);
+    }
+
+    + h3, + h4, + h2 {
+      @include rem(margin-top, 45px);
+    }
+  }
+}
+
+
+
+@media (max-width: $screen-landscape)  {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $screen-mobile)  {
+  html {
+    font-size: 12px;
+  }
+}

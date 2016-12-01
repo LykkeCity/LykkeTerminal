@@ -1,0 +1,77 @@
+.modal {
+
+
+  &.fade {
+    .modal-dialog {
+      @include transform(translate(0, 0) scale(.8))
+    }
+  }
+
+  &.in {
+   .modal-dialog {
+     @include transform(translate(0, 0) scale(1))
+   }
+  }
+}
+
+.modal-dialog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.modal-content {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 100%;
+
+  background: #FEFEFE;
+  border: 1px solid $gray-40;
+  box-shadow: $box-shadow-modal;
+  border-radius: $border-radius*2;
+}
+
+.modal-footer {
+  text-align: center;
+  border-top: 0;
+
+  @include rem(padding, 0 32px 32px);
+}
+
+.modal-body {
+  @include rem(padding, 24px 32px 24px);
+}
+
+.modal-header {
+  border-bottom: 0;
+  text-align: center;
+  @include rem(padding, 24px 32px 0);
+}
+
+.modal-backdrop {
+  background: $gray;
+
+  &.in {
+    opacity: .3;
+  }
+}
+
+.modal-sm {
+  width: 352px;
+}

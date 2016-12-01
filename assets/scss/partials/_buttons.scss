@@ -1,0 +1,180 @@
+.btn {
+  font-weight: $fw-semi;
+  background: $blue;
+  color: $white;
+  letter-spacing: 0;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border: 0;
+  text-decoration: none;
+
+  @include rem(font-size, 18px);
+  @include rem(padding, 9px 20px);
+  @include rem(font-size, 15px);
+  @include rem(min-width, 112px);
+
+  @include border-radius(100px);
+  @include transition(background .3s ease, color .3s ease, border .3s ease, transform .3s ease);
+  @include box-shadow(none!important);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover, &:active, &.active, &.active:hover, &:focus {
+    text-decoration: none;
+    background: $blue-dark;
+    color: $white;
+  }
+
+  &[disabled],
+  &.disabled,
+  &.button--disabled {
+    background: $gray-10 !important;
+    color: $gray-40 !important;
+    opacity: 1;
+    cursor: not-allowed;
+  }
+
+  .icon {
+    color: $gray-60;
+
+    @include rem(font-size, 14px);
+    @include rem(margin-left, 4px);
+    @include transition(color $transition-default);
+
+    + span {
+      color: $gray;
+      font-weight: normal;
+
+      @include rem(margin-left, 10px);
+    }
+  }
+
+  &--default {
+    background: transparent;
+    border: 1px solid $gray-25;
+    color: $gray;
+    font-weight: $fw-regular;
+
+    &:hover, &:active, &.active, &:focus {
+      background: transparent;
+      border-color: $gray-40;
+      color: $gray;
+    }
+
+    &[disabled],
+    &.disabled,
+    &.button--disabled {
+      background: $gray-5 !important;
+      border-color: $gray-25 !important;
+      color: $gray-25 !important;
+      cursor: not-allowed;
+    }
+  }
+
+  &--bordered {
+    background: transparent;
+    border: 2px solid;
+    color: $blue;
+
+    &:hover, &:active, &.active, &:focus {
+      background: $blue;
+      border-color: $blue;
+      color: $white;
+    }
+
+    &[disabled],
+    &.disabled,
+    &.button--disabled {
+      background: transparent !important;
+      color: $gray-25 !important;
+    }
+  }
+
+  &--accent {
+    text-transform: uppercase;
+    letter-spacing: .07em;
+  }
+
+  &--red {
+    background: $red;
+
+    &:hover, &:active, &.active, &:focus {
+      background: $red-dark;
+    }
+  }
+
+  &--green {
+    background: $green;
+
+    &:hover, &:active, &.active, &:focus {
+      background: $green-dark;
+    }
+  }
+
+  &--icon {
+    min-width: 0;
+    background: transparent;
+    border-radius: 4px;
+    color: $gray-40;
+
+    @include rem(padding, 4px);
+
+    .icon {
+      color: $gray-40;
+      margin-left: 0;
+    }
+
+    &:hover, &:hover, &:active, &.active, &.active:hover, &:focus {
+      background: transparent;
+      color: $gray-80;
+
+      .icon {
+        background: transparent;
+        color: $gray-80;
+      }
+    }
+
+    &._blue_hover {
+      color: $gray-light;
+
+      .icon {
+        color: $gray-light;
+      }
+
+      &:hover, &:active, &.active, &.active:hover, &:focus {
+        text-decoration: none;
+        background: transparent;
+        color: $blue;
+
+        .icon {
+          color: $blue;
+        }
+      }
+
+    }
+  }
+
+  &--action {
+    font-weight: $fw-regular;
+
+    @include rem(font-size, 16px);
+    @include rem(line-height, 18px);
+    @include rem(padding-top, 6px);
+    @include rem(padding-bottom, 6px);
+
+    ._big {
+      @include rem(font-size, 24px);
+    }
+
+    ._action_name {
+      display: block;
+    }
+  }
+
+  &.btn-block {
+    min-width: 0 !important;
+  }
+}

@@ -1,0 +1,19 @@
+html {
+  font-size: $main-font-size;
+  position: relative;
+  min-height: 100%;
+  height: auto;
+}
+
+body {
+  color: $gray;
+  font-family: $ff;
+  font-weight: $fw-regular;
+  font-size-adjust: none;
+  line-height: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+
+  @include rem(font-size, $main-font-size);
+}

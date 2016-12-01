@@ -1,0 +1,22 @@
+.table {
+  tr {
+    th, td {
+      @include rem(padding, 12px 8px);
+    }
+
+    th {
+      font-weight: normal;
+      text-transform: none;
+      color: $gray;
+      border-top: 0;
+      border-bottom: 1px solid $gray-25;
+
+      @include rem(font-size, 16px);
+      @include rem(line-height, 24px);
+    }
+
+    td {
+      border-bottom: 1px solid $gray-5;
+    }
+  }
+}
