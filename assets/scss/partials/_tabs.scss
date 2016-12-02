@@ -4,19 +4,58 @@
   margin-right: 0;
 
   > li {
+    position: relative;
+
+    .icon {
+      color: $gray-light;
+      position: relative;
+      top: -1px;
+
+      @include rem(font-size, 10px);
+    }
+
+    > .btn {
+      position: absolute;
+      right: 0;
+      z-index: 2;
+      top: 50%;
+
+      @include rem(padding, 7px);
+      @include rem(margin-left, 5px);
+      @include rem(margin-top, -11px);
+      @include rem(line-height, 10px);
+
+      + a:not(.btn) {
+        @include rem(padding-right, 28px !important);
+      }
+
+      &:hover {
+        .icon {
+          color: $blue !important;
+        }
+      }
+    }
+
     > a:not(.btn) {
       border: 0;
       border-bottom: 2px solid transparent;
       color: $gray-40;
       font-weight: $fw-regular;
+      text-align: center;
 
       @include rem(font-size, 16px);
+      @include rem(min-width, 40px);
       @include rem(padding, 11px 20px);
+      @include transition($transition-all);
 
       &:hover, &:focus {
         text-decoration: none;
         background: transparent;
         color: $gray;
+
+        > .icon {
+          color: $blue !important;
+        }
       }
     }
 
@@ -26,6 +65,35 @@
         border: 0;
         border-bottom: 2px solid $blue;
         color: $blue;
+      }
+    }
+  }
+
+  &--inline {
+    border-bottom: 0;
+
+    > li {
+      > a:not(.btn) {
+        border: 0;
+        font-weight: $fw-semi;
+        color: $gray;
+
+        @include rem(margin-right, 8px);
+        @include border-radius(100px);
+        @include rem(min-width, 104px);
+
+        &:hover, &:focus {
+          color: $blue;
+        }
+      }
+
+      &.active {
+        > a, > a:hover, > a:focus {
+          font-weight: $fw-semi;
+          border: 0;
+          background: $blue;
+          color: $white;
+        }
       }
     }
   }
@@ -64,6 +132,7 @@
         > a, > a:hover, > a:focus {
           box-shadow: inset 0 2px 0 0 $blue;
           background: $white;
+          font-weight: normal;
         }
       }
     }

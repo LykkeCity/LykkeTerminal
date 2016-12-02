@@ -85,7 +85,7 @@
               <th class="_td_name">
                 <div class="table_sorting">
                   Name
-                  <button type="button" class="btn btn--icon"><i class="icon icon--caret"></i></button>
+                  <button type="button" class="btn btn--icon"><i class="icon icon--caret-mini"></i></button>
                 </div>
               </th>
               <th class="text-center">+/-</th>
@@ -99,18 +99,18 @@
             <tr>
               <td class="_td_name">
                 <span class="status_label status_label--green">Autocad</span>
-                <button type="button" class="btn btn--icon"><i class="icon icon--caret"></i></button>
+                <a href="#" class="btn btn--icon"><i class="icon icon--caret-mini"></i></a>
               </td>
               <td>
                 <i class="icon icon--up text--green"></i>
               </td>
               <td class="_td_sell text-right">
                 <span class="text--green">0.98310</span>
-                <button type="button" class="btn btn--icon"><i class="icon icon--caret_right"></i></button>
+                <a href="#" class="btn btn--icon"><i class="icon icon--caret-mini_right"></i></a>
               </td>
               <td class="_td_buy text-right">
                 <span class="text--green">0.98310</span>
-                <button type="button" class="btn btn--icon"><i class="icon icon--caret_right"></i></button>
+                <a href="#" class="btn btn--icon"><i class="icon icon--caret-mini_right"></i></a>
               </td>
               <td class="_td_change text-center">
                 <span class="text--green">+0.002</span>
@@ -126,18 +126,18 @@
             <tr>
               <td class="_td_name">
                 <span class="status_label status_label--green">AUDPLN</span>
-                <button type="button" class="btn btn--icon"><i class="icon icon--caret"></i></button>
+                <a href="#" class="btn btn--icon"><i class="icon icon--caret-mini"></i></a>
               </td>
               <td>
                 <i class="icon icon--down text--red"></i>
               </td>
               <td class="_td_sell text-right">
                 <span class="text--red">1.00041</span>
-                <button type="button" class="btn btn--icon"><i class="icon icon--caret_right"></i></button>
+                <a href="#" class="btn btn--icon"><i class="icon icon--caret-mini_right"></i></a>
               </td>
               <td class="_td_buy text-right">
                 <span class="text--red">1.00344</span>
-                <button type="button" class="btn btn--icon"><i class="icon icon--caret_right"></i></button>
+                <a href="#" class="btn btn--icon"><i class="icon icon--caret-mini_right"></i></a>
               </td>
               <td class="_td_change text-center">
                 <span class="text--red">-0.002</span>
@@ -164,23 +164,40 @@
 
           <div class="tab-panel">
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation"><a href="#"><i class="icon--menu"></i></a></li>
-              <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
+              <li role="presentation"><a href="#"><i class="icon icon--menu"></i></a></li>
+              <li role="presentation" class="active">
+                <button type="button" class="btn btn--icon">
+                  <i class="icon icon--close-mini"></i>
+                </button>
+                <a href="#info" aria-controls="info" role="tab" data-toggle="tab">
+                  Info
+                </a>
+              </li>
               <li role="presentation" class="">
+                <button type="button" class="btn btn--icon">
+                  <i class="icon icon--close-mini"></i>
+                </button>
                 <a href="#tab1" aria-controls="participants" role="tab" data-toggle="tab">
                   Tab 1
                 </a>
               </li>
               <li role="presentation" class="">
+                <button type="button" class="btn btn--icon">
+                  <i class="icon icon--close-mini"></i>
+                </button>
                 <a href="#tab2" aria-controls="comments" role="tab" data-toggle="tab">
                   Tab 2
                 </a>
               </li>
               <li role="presentation">
+                <button type="button" class="btn btn--icon">
+                  <i class="icon icon--close-mini"></i>
+                </button>
                 <a href="#tab3" aria-controls="results" role="tab" data-toggle="tab">
                   Tab 3
                 </a>
               </li>
+              <li role="presentation"><a href="#"><i class="icon icon--add"></i></a></li>
             </ul>
           </div>
 
@@ -210,10 +227,48 @@
               </a>
             </li>
           </ul>
+
+          <br>
+          <br>
+
+          <ul class="nav nav-tabs nav-tabs--inline" role="tablist">
+            <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
+            <li role="presentation" class="">
+              <a href="#tab11" aria-controls="participants" role="tab" data-toggle="tab">
+                Tab 1
+              </a>
+            </li>
+            <li role="presentation" class="">
+              <a href="#tab12" aria-controls="comments" role="tab" data-toggle="tab">
+                Tab 2
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#tab13" aria-controls="results" role="tab" data-toggle="tab">
+                Tab 3
+              </a>
+            </li>
+          </ul>
+
+          <br>
+          <br>
+
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn--default active">
+              <input type="radio" name="options" id="option11" autocomplete="off" checked> Tab 1
+            </label>
+            <label class="btn btn--default">
+              <input type="radio" name="options" id="option21" autocomplete="off"> Tab 2
+            </label>
+            <label class="btn btn--default">
+              <input type="radio" name="options" id="option31" autocomplete="off"> Tab 3
+            </label>
+          </div>
+
         </div>
       </div>
     </div>
-    </section>
+  </section>
 
   <section class="section">
     <div class="container">
@@ -234,8 +289,8 @@
                   <form action="">
                     <div class="form-group">
                       <div class="buttons-inline pull-right">
-                        <button class="btn btn--icon"><i class="icon icon--dots"></i></button>
-                        <button class="btn btn--icon"><i class="icon icon--revert"></i></button>
+                        <button type="button" class="btn btn--icon"><i class="icon icon--dots"></i></button>
+                        <button type="button" class="btn btn--icon"><i class="icon icon--revert"></i></button>
                       </div>
                       <div class="radio">
                         <input type="radio" name="radio1" id="radio1" class="radio__control" checked>
@@ -244,8 +299,8 @@
                     </div>
                     <div class="form-group">
                       <div class="buttons-inline pull-right">
-                        <button class="btn btn--icon"><i class="icon icon--dots"></i></button>
-                        <button class="btn btn--icon"><i class="icon icon--revert"></i></button>
+                        <button type="button" class="btn btn--icon"><i class="icon icon--dots"></i></button>
+                        <button type="button" class="btn btn--icon"><i class="icon icon--revert"></i></button>
                       </div>
                       <div class="radio">
                         <input type="radio" name="radio1" id="radio2" class="radio__control">
@@ -254,8 +309,8 @@
                     </div>
                     <div class="form-group">
                       <div class="buttons-inline pull-right">
-                        <button class="btn btn--icon"><i class="icon icon--dots"></i></button>
-                        <button class="btn btn--icon"><i class="icon icon--close"></i></button>
+                        <button type="button" class="btn btn--icon"><i class="icon icon--dots"></i></button>
+                        <button type="button" class="btn btn--icon"><i class="icon icon--close-mini"></i></button>
                       </div>
                       <div class="radio">
                         <input type="radio" name="radio1" id="radio3" class="radio__control">
@@ -294,12 +349,12 @@
                       <div class="row">
                         <div class="col-xs-8">
                           <input type="text" class="form-control" placeholder="Layouts name">
-                          <button class="btn btn--icon form-control-addon">
+                          <button type="button" class="btn btn--icon form-control-addon">
                             <i class="icon icon--close"></i>
                           </button>
                         </div>
                         <div class="col-xs-4">
-                          <button class="btn btn-block">Create</button>
+                          <button type="button" class="btn btn-block">Create</button>
                         </div>
                       </div>
                     </div>
@@ -318,32 +373,6 @@
                       <button type="button" class="btn btn--default">Save as new <i class="icon icon--dots"></i></button>
                     </div>
                   </form>
-                </div>
-              </div>
-
-              <div class="text-center clearfix" style="padding: 30px 0">
-                <a href="#modal" data-toggle="modal" class="btn">Show modal</a>
-              </div>
-
-              <div class="modal fade" tabindex="-1" role="dialog" id="modal">
-                <div class="modal-dialog modal-sm" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h3 class="modal-title">Rename layout</h3>
-                    </div>
-                    <div class="modal-body">
-                      <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="Layouts name">
-                        <button class="btn btn--icon form-control-addon">
-                          <i class="icon icon--close"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn--primary">Ok</button>
-                      <button type="button" class="btn btn--default" data-dismiss="modal">Cancel</button>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -401,6 +430,140 @@
                 </div>
               </div>
 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 automargin">
+
+          <h2>Modals</h2>
+
+          <div class="clearfix buttons-inline">
+            <a href="#modal" data-toggle="modal" class="btn">Modal Create Layout</a>
+            <a href="#modal_modules" data-toggle="modal" class="btn">Modal Modules</a>
+          </div>
+
+          <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+            <div class="modal-dialog modal-sm" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title">Rename layout</h3>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Layouts name">
+                    <button class="btn btn--icon form-control-addon">
+                      <i class="icon icon--close"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn--primary">Ok</button>
+                  <button type="button" class="btn btn--default" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal modal--modules fade" tabindex="-1" role="dialog" id="modal_modules">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon icon--close"></i></button>
+                  <h3 class="modal-title text-left">Rename layout</h3>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-sm-8 _border_right">
+                      <h5>Create new module</h5>
+
+                      <div class="row">
+                        <div class="col-xs-4">
+                          <a href="#" class="module_link">
+                            <div class="icon_block">
+                              <div class="icon_block__img">
+                                <img src="img/trades.svg" alt="Trades" width="66">
+                              </div>
+                              <span class="icon_block__title">Trades</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-xs-4">
+                          <a href="#" class="module_link">
+                            <div class="icon_block">
+                              <div class="icon_block__img">
+                                <img src="img/orders.svg" alt="Orders" width="73">
+                              </div>
+                              <span class="icon_block__title">Orders</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-xs-4">
+                          <a href="#" class="module_link">
+                            <div class="icon_block">
+                              <div class="icon_block__img">
+                                <img src="img/watchlist.svg" alt="Watchlist" width="61">
+                              </div>
+                              <span class="icon_block__title">Watchlist</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-xs-4">
+                          <a href="#" class="module_link">
+                            <div class="icon_block">
+                              <div class="icon_block__img">
+                                <img src="img/dealing.svg" alt="Dealing" width="66">
+                              </div>
+                              <span class="icon_block__title">Dealing</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-xs-4">
+                          <a href="#" class="module_link">
+                            <div class="icon_block">
+                              <div class="icon_block__img">
+                                <img src="img/activities.svg" alt="Activities" width="74">
+                              </div>
+                              <span class="icon_block__title">Activities</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-xs-4">
+                          <a href="#" class="module_link">
+                            <div class="icon_block">
+                              <div class="icon_block__img">
+                                <img src="img/charts.svg" alt="Charts" width="70">
+                              </div>
+                              <span class="icon_block__title">Charts</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-xs-4">
+                          <a href="#" class="module_link">
+                            <div class="icon_block">
+                              <div class="icon_block__img">
+                                <img src="img/news.svg" alt="News" width="62">
+                              </div>
+                              <span class="icon_block__title">News</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 _border_left">
+                      <h5>Last Created</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

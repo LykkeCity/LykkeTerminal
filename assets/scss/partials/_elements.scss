@@ -19,19 +19,38 @@
   padding: 30px 0;
 }
 
-
-.icon--dots:before {
-  font-size: 20%;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
-}
-
-.icon--close:before {
-  font-size: 75%;
-}
-
 .icon--pair_view:before {
   position: relative;
   left: -2px;
+}
+
+@media all and (min-width: $screen-landscape + 1) {
+  ._border_left {
+    border-left: 1px solid $gray-25;
+  }
+
+  ._border_right {
+    border-right: 1px solid $gray-25;
+
+    + ._border_left {
+      margin-left: -1px;
+    }
+  }
+}
+
+.icon_block {
+  text-align: center;
+
+  &__img {
+    @include rem(height, 64px);
+    @include rem(margin-bottom, 30px);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    display: block;
+  }
 }

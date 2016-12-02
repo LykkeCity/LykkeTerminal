@@ -64,6 +64,12 @@
       color: $gray;
     }
 
+    &.active {
+      background: $blue !important;
+      color: $white !important;
+      border-color: $blue;
+    }
+
     &[disabled],
     &.disabled,
     &.button--disabled {
@@ -119,6 +125,7 @@
     background: transparent;
     border-radius: 4px;
     color: $gray-40;
+    line-height: normal;
 
     @include rem(padding, 4px);
 

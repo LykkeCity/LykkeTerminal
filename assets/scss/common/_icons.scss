@@ -18,12 +18,17 @@
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
+  line-height: normal;
   display: inline-block;
   vertical-align: middle;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon--frame:before {
+  content: "\e924";
 }
 .icon--pair_view:before {
   content: "\e91f";
@@ -37,44 +42,8 @@
 .icon--trading_view:before {
   content: "\e922";
 }
-.icon--add:before {
-  content: "\e900";
-}
-.icon--arrow_left:before {
-  content: "\e901";
-}
-.icon--arrow_right:before {
-  content: "\e902";
-}
-.icon--caret-mini:before {
-  content: "\e903";
-}
-.icon--caret:before {
-  content: "\e904";
-}
-.icon--check:before {
-  content: "\e905";
-}
-.icon--close_circle:before {
-  content: "\e906";
-}
 .icon--close_tabs:before {
   content: "\e907";
-}
-.icon--close:before {
-  content: "\e908";
-}
-.icon--dots:before {
-  content: "\e909";
-}
-.icon--down:before {
-  content: "\e90a";
-}
-.icon--graph_down:before {
-  content: "\e90b";
-}
-.icon--graph_up:before {
-  content: "\e90c";
 }
 .icon--layout_3window:before {
   content: "\e90d";
@@ -91,23 +60,8 @@
 .icon--layout_copy:before {
   content: "\e911";
 }
-.icon--layouts:before {
-  content: "\e912";
-}
-.icon--list:before {
-  content: "\e913";
-}
-.icon--mail:before {
-  content: "\e914";
-}
 .icon--maximize:before {
   content: "\e915";
-}
-.icon--menu:before {
-  content: "\e916";
-}
-.icon--revert:before {
-  content: "\e917";
 }
 .icon--split_hor:before {
   content: "\e918";
@@ -115,11 +69,64 @@
 .icon--split_ver:before {
   content: "\e919";
 }
-.icon--tasks:before {
-  content: "\e91a";
-}
 .icon--trash_alt:before {
   content: "\e91b";
+}
+.icon--lock:before {
+  content: "\e925";
+}
+.icon--user:before {
+  content: "\e926";
+}
+.icon--left:before {
+  content: "\e923";
+}
+.icon--add:before {
+  content: "\e900";
+}
+.icon--arrow_left:before {
+  content: "\e901";
+}
+.icon--arrow_right:before {
+  content: "\e902";
+}
+.icon--caret-mini:before {
+  content: "\e903";
+}
+.icon--caret-mini_right:before {
+  content: "\e903";
+  display: block;
+  @include transform(rotate(-90deg));
+}
+.icon--caret:before {
+  content: "\e904";
+}
+.icon--check:before {
+  content: "\e905";
+}
+.icon--close_circle:before {
+  content: "\e906";
+}
+.icon--close:before {
+  content: "\e908";
+}
+.icon--dots:before {
+  content: "\e909";
+}
+.icon--down:before {
+  content: "\e90a";
+}
+.icon--list:before {
+  content: "\e913";
+}
+.icon--menu:before {
+  content: "\e916";
+}
+.icon--close-mini:before {
+  content: "\e927";
+}
+.icon--revert:before {
+  content: "\e917";
 }
 .icon--trash:before {
   content: "\e91c";
@@ -129,4 +136,19 @@
 }
 .icon--withdraw:before {
   content: "\e91e";
+}
+.icon--graph_down:before {
+  content: "\e90b";
+}
+.icon--graph_up:before {
+  content: "\e90c";
+}
+.icon--layouts:before {
+  content: "\e912";
+}
+.icon--mail:before {
+  content: "\e914";
+}
+.icon--tasks:before {
+  content: "\e91a";
 }

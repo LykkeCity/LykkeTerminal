@@ -1,0 +1,16 @@
+.module_link {
+  color: $gray;
+  display: block;
+  max-width: 100%;
+
+  @include rem(padding, 30px 20px 16px);
+  @include rem(width, 160px);
+  @include rem(height, 160px);
+  @include rem(margin, 0 auto 8px);
+
+  @include transition(background $transition-default);
+
+  &:hover {
+    background: #F8F9F9;
+  }
+}

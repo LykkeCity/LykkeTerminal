@@ -1,6 +1,4 @@
 .modal {
-
-
   &.fade {
     .modal-dialog {
       @include transform(translate(0, 0) scale(.8))
@@ -11,6 +9,14 @@
    .modal-dialog {
      @include transform(translate(0, 0) scale(1))
    }
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    &--modules {
+      .col-sm-4 {
+        @include rem(margin-top, 20px)
+      }
+    }
   }
 }
 
@@ -74,4 +80,8 @@
 
 .modal-sm {
   width: 352px;
+}
+
+.modal-lg {
+  @include rem(width, 915px)
 }
