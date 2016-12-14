@@ -14,6 +14,7 @@
   display: block;
   float: none;
   padding: 0;
+  background: $white;
 
   @include rem(width, 387px);
   @include rem(margin-left, -193px);
@@ -67,7 +68,7 @@
     visibility: visible;
   }
 
-  &--show, &.show, .show & {
+  &--show, &.show, .show &, .open &, &.open {
     opacity: 1;
     visibility: visible;
   }

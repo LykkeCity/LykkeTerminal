@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "jquery": "1.12.4",
-    "fullpage.js": "^2.8.9"
+    "bootstrap-select": "1.12.0",
+    "eonasdan-bootstrap-datetimepicker": "git+https://github.com/Eonasdan/bootstrap-datetimepicker.git"
   }
 }

@@ -185,3 +185,19 @@
     min-width: 0 !important;
   }
 }
+
+.btn-group {
+  &--sm {
+    >.btn {
+      border-radius: 4px;
+      min-width: 0;
+
+      @include rem(font-size, 14px);
+      @include rem(padding, 5px 14px);
+
+      &.active {
+        font-weight: $fw-semi;
+      }
+    }
+  }
+}

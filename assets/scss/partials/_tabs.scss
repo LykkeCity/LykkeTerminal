@@ -6,27 +6,39 @@
   > li {
     position: relative;
 
+    &.pull-right {
+      > a {
+        border-left: 0 !important;
+      }
+    }
+
     .icon {
       color: $gray-light;
       position: relative;
       top: -1px;
 
-      @include rem(font-size, 10px);
+      @include rem(font-size, 12px);
+
+      &--menu {
+        color: $gray-40;
+
+        @include rem(font-size, 10px);
+      }
     }
 
     > .btn {
       position: absolute;
-      right: 0;
       z-index: 2;
       top: 50%;
 
       @include rem(padding, 7px);
+      @include rem(right, 3px);
       @include rem(margin-left, 5px);
       @include rem(margin-top, -11px);
       @include rem(line-height, 10px);
 
       + a:not(.btn) {
-        @include rem(padding-right, 28px !important);
+        @include rem(padding-right, 34px !important);
       }
 
       &:hover {
@@ -48,13 +60,27 @@
       @include rem(padding, 11px 20px);
       @include transition($transition-all);
 
+      > .icon {
+        @include transition(color .3s ease);
+      }
+
       &:hover, &:focus {
         text-decoration: none;
         background: transparent;
         color: $gray;
 
         > .icon {
-          color: $blue !important;
+          color: $gray;
+
+          &--menu {
+            color: $blue;
+          }
+        }
+      }
+
+      .icon {
+        + span {
+          @include rem(margin-left, 3px)
         }
       }
     }
@@ -64,7 +90,7 @@
         font-weight: $fw-semi;
         border: 0;
         border-bottom: 2px solid $blue;
-        color: $blue;
+        color: $text;
       }
     }
   }
@@ -101,7 +127,7 @@
   @media all and (max-width: 539px) {
     width: auto;
 
-    @include rem(margin-right, -15px !important);
+    @include rem(margin-right, 0 !important);
   }
 }
 
