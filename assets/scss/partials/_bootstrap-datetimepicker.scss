@@ -371,3 +371,177 @@
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+
+.form-control.datetimepicker {
+  letter-spacing: .02em;
+
+  + .input-group-addon {
+    color: rgba($gray, .6) !important;
+  }
+}
+
+
+
+.bootstrap-datetimepicker-widget {
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  position: absolute;
+  z-index:10;
+  box-shadow: 0 8px 40px 0 rgba(63, 77, 96, 0.4), 0 5px 5px 0 rgba(63, 77, 96, 0.05);
+
+  @include rem(padding, 10px 16px);
+  @include rem(font-size, 16px);
+
+  &.dropdown-menu {
+    opacity:1;
+    visibility: visible;
+    z-index:1001;
+    @include rem(padding, 10px 16px);
+    @include rem(font-size, 16px);
+    @include rem(margin, 8px 0);
+    @include rem(width, 376px);
+
+    &:before, &:after {
+      display: none;
+    }
+  }
+
+  [class^="icon--"], [class*=" icon--"] {
+    color: #8c94a0;
+  }
+
+  .fade {
+    opacity: 0;
+    @include transition(opacity .15s linear);
+    &.in {
+      opacity: 1;
+    }
+  }
+
+  .collapse {
+    display: none;
+
+    &.in      { display: block; }
+  }
+
+  tr.collapse.in    { display: table-row; }
+
+  tbody.collapse.in { display: table-row-group; }
+
+  .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    @include transition-property(height, visibility);
+    @include transition-duration(.35s);
+    @include transition-timing-function(ease);
+  }
+
+  .collapse {
+    overflow: hidden;
+
+    @include transition(height .2s ease);
+  }
+
+  &:after {
+    display: none;
+  }
+
+  table {
+    th {
+      font-weight: $fw-semi;
+      color: $blue;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+
+      &.picker-switch {
+        color: $text;
+      }
+    }
+
+    td, th {
+
+      @include rem(padding, 10px);
+    }
+
+    td {
+      text-shadow: none !important;
+
+      &.active, &.active:hover {
+        background: $blue;
+        color: #fff;
+      }
+
+      &.old, &.new {
+        color: rgba($gray, .35);
+      }
+
+      &.day {
+        @include rem(width, 48px);
+        @include rem(height, 40px);
+        @include rem(line-height, 20px);
+      }
+
+      &.today {
+        &:before {
+          border-bottom-color: $blue;
+        }
+      }
+
+      &.active.today:before {
+        border-bottom-color: #fff;
+      }
+
+      &.day:hover,
+      &.hour:hover,
+      &.minute:hover,
+      &.second:hover {
+        background: rgba($gray, .1);
+      }
+    }
+  }
+
+  [class^="icon--"], [class*=" icon--"] {
+    margin-right: 0;
+  }
+
+  .picker-switch a {
+    color: $gray;
+  }
+
+  .timepicker-hour, .timepicker-minute, .timepicker-second {
+    font-weight: $fw-semi;
+    font-size: 1.3em;
+  }
+
+  table td span.active {
+    background: $blue;
+    text-shadow: none;
+  }
+
+  .btn {
+    background: #fff;
+    border-radius: 4px;
+    height: auto;
+    color: $gray;
+
+    @include rem(padding, 4px);
+
+    &:hover {
+      color: $gray;
+      background: transparent;
+    }
+  }
+}
+
+.input-group.date {
+  .input-group-addon {
+    @include transition(color .2s ease);
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}

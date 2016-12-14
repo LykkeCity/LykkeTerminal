@@ -387,6 +387,36 @@
                 </div>
               </div>
             </div>
+
+            <br>
+            <br>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <div class="form-group has-feedback">
+                    <label for="text3" class="control-label">Calendar</label>
+                    <div class="feedback-group date datetimepicker">
+                      <input type="text" class="datetimepicker form-control form-control--with_icon">
+                      <button class="form-control-addon btn btn--icon icon_disabled"><i class="icon icon--caret"></i></button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group has-feedback">
+                  <label for="text3" class="control-label">Select</label>
+                  <div class="feedback-group">
+                    <select name="" id="" class="form-control form-control--with_icon">
+                      <option value="">1</option>
+                      <option value="">2</option>
+                    </select>
+                    <button class="form-control-addon btn btn--icon icon_disabled"><i class="icon icon--caret"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </form>
 
           </div>
@@ -731,7 +761,27 @@
   </section>
 
   <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/moment.js"></script>
+  <script src="js/vendor/bootstrap-select.min.js"></script>
+  <script src="js/vendor/bootstrap-datetimepicker.min.js"></script>
   <script src="js/vendor/bootstrap.min.js"></script>
 
+
+  <script>
+    $(function () {
+      $('.datetimepicker').datetimepicker({
+        debug: true,
+        format: 'DD.MM.YYYY',
+        icons: {
+          time: "icon--clock",
+          date: "icon--cal",
+          up: "icon--chevron-thin-up",
+          down: "icon--chevron-thin-down",
+          previous: "icon--chevron-thin-left",
+          next: "icon--chevron-thin-right"
+        }
+      });
+    });
+  </script>
 </body>
 </html>

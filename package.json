@@ -15,8 +15,9 @@
     "gulp-usemin": "0.3.16"
   },
   "dependencies": {
-    "jquery": "1.12.4",
     "bootstrap-select": "1.12.0",
-    "eonasdan-bootstrap-datetimepicker": "git+https://github.com/Eonasdan/bootstrap-datetimepicker.git"
+    "eonasdan-bootstrap-datetimepicker": "git+https://github.com/Eonasdan/bootstrap-datetimepicker.git",
+    "jquery": "1.12.4",
+    "moment": "^2.17.1"
   }
 }

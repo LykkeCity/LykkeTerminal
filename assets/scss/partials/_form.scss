@@ -129,6 +129,13 @@ label.hint {
   }
 }
 
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
 .switcher {
   display: inline-block;
   vertical-align: middle;
@@ -335,6 +342,10 @@ label.hint {
 
   .icon {
     @include rem(line-height, 28px);
+  }
+
+  &.icon_disabled {
+    pointer-events: none;
   }
 }
 
